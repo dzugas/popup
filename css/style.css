@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+}
+
+.popup {
+    width: 840px;
+    position: absolute;
+    border-top: 2px solid red;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.popup__header {
+    position: relative;
+}
+
+.popup__close {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+    background: #fff0;
+}
+
+.popup__close::before, .popup__close::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 15px;
+    width: 2px;
+    background-color: #c2c2c2;
+}
+
+.popup__close:before {
+  transform: rotate(45deg);
+}
+.popup__close:after {
+  transform: rotate(-45deg);
+}
+
+.popup__header-text {
+    font-size: 31px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.button {
+    box-sizing: border-box;
+    position: relative;
+    background: #252525;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #666666;
+}
+
+.popup__body {
+    background: #f3f3f3;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.button--fb {
+    background: #3e5b96;
+    padding: 15px 65px 15px 85px;
+    margin-bottom: 20px;
+    
+}
+
+.button--fb::before {
+    content: "";
+    position: absolute;
+    background: url("../img/facebook.png") no-repeat;
+    height: 22px;
+    width: 10px;
+    top: 12px;
+    left: 20px;
+}
+
+.button--fb:hover {
+    background-color: #385388;
+}
+
+.button--google {
+    background: #dd5342;
+    padding: 15px 65px 15px 90px;
+}
+
+.button--google::before {
+    content: "";
+    position: absolute;
+    background: url(../img/google.png) no-repeat;
+    height: 22px;
+    width: 25px;
+    top: 12px;
+    left: 20px;
+}
+
+.button--google:hover {
+    background-color: #cd4c3c;
+}
+
+.col-1-of-2 {
+    width: 50%;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.border {
+    border-right: 1px solid #cfcfcf;
+}
+
+.form-field {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-field:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-field--error input:invalid {
+    border: 1px solid #bf0c00;
+    color: #bf0c00;
+}
+
+label {
+    cursor: pointer;
+}
+
+[type="text"], [type="email"], [type="password"] {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    height: 38px;
+    border-radius: 3px;
+    outline: none;
+    font-size: 100%;
+}
+
+.popup__footer {
+    text-align: center;
+    font-size: 18px;
+    color: #666666;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+
+
+
+@media (max-width : 768px) {
+    .popup {
+        max-width: 480px;
+    }
+    .popup__body {
+        flex-direction: column-reverse;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .col-1-of-2 {
+        padding: 0;
+    }
+    
+    .form-field:last-child {
+        margin-bottom: 25px;
+    }
+    .col-1-of-2,.button--fb,.button--google {
+        width: 100%;
+    }
+    .border {
+        padding-top:25px;
+        border: none;
+        border-top: 1px solid #b9b9b9;
+    }
+}
+
+
+
+
